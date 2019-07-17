@@ -36,7 +36,7 @@ let menuItems = [
 
 function menuComponent(arr) {
   const menu = document.createElement('div');
-  menuDiv.classList.add('menu');
+  menu.classList.add('menu');
 
   const menuUl = document.createElement('ul');
 
@@ -44,6 +44,7 @@ function menuComponent(arr) {
 
   arr.forEach(thing => {
     let menuItem = document.createElement('li');
+    menuItem.textContent = thing;
 
     menuUl.appendChild(menuItem);
   });
@@ -56,3 +57,6 @@ function menuComponent(arr) {
 
   return menu;
 }
+
+const header = document.querySelector('.header');
+header.appendChild(menuComponent(menuItems));
