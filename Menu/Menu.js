@@ -34,6 +34,25 @@ let menuItems = [
   
 */
 
-function MenuComponent(){
-  const menu = document.createElement('div')
+function menuComponent(arr) {
+  const menu = document.createElement('div');
+  menuDiv.classList.add('menu');
+
+  const menuUl = document.createElement('ul');
+
+  menu.appendChild(menuUl);
+
+  arr.forEach(thing => {
+    let menuItem = document.createElement('li');
+
+    menuUl.appendChild(menuItem);
+  });
+
+  const menuButton = document.querySelector('.menu-button');
+
+  menuButton.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+  });
+
+  return menu;
 }
