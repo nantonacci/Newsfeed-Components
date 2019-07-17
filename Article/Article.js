@@ -135,6 +135,7 @@ function createArticle(obj) {
 
   const articleSpan = document.createElement('span');
   articleSpan.classList.add('expandButton');
+  articleSpan.textContent = 'expand';
 
   //expand button
   articleSpan.addEventListener('click', () => {
