@@ -119,23 +119,29 @@ function createArticle(data) {
 
   const articleH2 = document.createElement('h2');
   articleH2.textContent = data.title;
+  article.appendChild(articleH2);
 
   const articleDate = document.createElement('p');
   articleDate.classList.add('date');
   articleDate.textContent = data.date;
+  article.appendChild(articleDate);
 
   const articleP1 = document.createElement('p');
   articleP1.textContent = data.firstParagraph;
+  article.appendChild(articleP1);
 
   const articleP2 = document.createElement('p');
-  articleP1.textContent = data.secondParagraph;
+  articleP2.textContent = data.secondParagraph;
+  article.appendChild(articleP2);
 
   const articleP3 = document.createElement('p');
-  articleP1.textContent = data.thirdParagraph;
+  articleP3.textContent = data.thirdParagraph;
+  article.appendChild(articleP3);
 
   const articleSpan = document.createElement('span');
   articleSpan.classList.add('expandButton');
   articleSpan.textContent = 'expand';
+  article.appendChild(articleSpan);
 
   //expand button
   articleSpan.addEventListener('click', () => {
