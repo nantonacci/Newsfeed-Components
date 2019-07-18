@@ -107,31 +107,31 @@ const data = [
 
   Step 3: return the entire component.
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+  Step 4: Map over the data, creating a component for each object and add each component to the DOM as children of the 'articles' div.
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
+  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article
 
 */
 
-function createArticle(obj) {
+function createArticle(data) {
   const article = document.createElement('div');
   article.classList.add('article');
 
   const articleH2 = document.createElement('h2');
-  articleH2.textContent = obj.title;
+  articleH2.textContent = data.title;
 
   const articleDate = document.createElement('p');
   articleDate.classList.add('date');
-  articleDate.textContent = obj.date;
+  articleDate.textContent = data.date;
 
   const articleP1 = document.createElement('p');
-  articleP1.textContent = obj.firstParagraph;
+  articleP1.textContent = data.firstParagraph;
 
   const articleP2 = document.createElement('p');
-  articleP1.textContent = obj.secondParagraph;
+  articleP1.textContent = data.secondParagraph;
 
   const articleP3 = document.createElement('p');
-  articleP1.textContent = obj.thirdParagraph;
+  articleP1.textContent = data.thirdParagraph;
 
   const articleSpan = document.createElement('span');
   articleSpan.classList.add('expandButton');
